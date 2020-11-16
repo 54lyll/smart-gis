@@ -1,6 +1,6 @@
 package com.wonderzh.gis.core.entity;
 
-import com.smartwater.common.util.DoubleArithUtil;
+import com.wonderzh.gis.core.util.DoubleArithUtil;
 import lombok.Data;
 
 /**

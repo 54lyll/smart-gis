@@ -1,9 +1,9 @@
 package com.wonderzh.gis.core;
 
-import com.smartwater.common.util.GeneralUtil;
 import com.wonderzh.gis.core.converter.EllipsoidConverter;
 import com.wonderzh.gis.core.coordinate.SpaceCoordinate;
 import com.wonderzh.gis.core.param.SevenParam;
+import com.wonderzh.gis.core.util.GeneralUtil;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,11 +1,11 @@
 package com.wonderzh.gis.core;
 
-import com.smartwater.common.util.GeneralUtil;
 import com.wonderzh.gis.core.converter.EllipsoidConverter;
 import com.wonderzh.gis.core.coordinate.AbstractCoordinate;
 import com.wonderzh.gis.core.coordinate.BLHCoordinate;
 import com.wonderzh.gis.core.coordinate.GaussCoordinate;
 import com.wonderzh.gis.core.param.FourParam;
+import com.wonderzh.gis.core.util.GeneralUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +19,6 @@ import java.util.List;
  * @Version: 1.0
  */
 
-@Slf4j
 @Service
 public class PlaneTransform implements EllipsoidTransform {
 
@@ -58,7 +57,6 @@ public class PlaneTransform implements EllipsoidTransform {
     @Override
     public List<GaussCoordinate> planeTransformBatch(List<GaussCoordinate> source, FourParam param) {
         if (GeneralUtil.isOneEmpty(source, param)) {
-            log.error("空参请求");
             return null;
         }
         List<GaussCoordinate> gaussTargets = new ArrayList<>(source.size());
@@ -73,7 +71,6 @@ public class PlaneTransform implements EllipsoidTransform {
     @Override
     public GaussCoordinate planeTransform(GaussCoordinate source, FourParam param) {
         if (GeneralUtil.isOneEmpty(source, param)) {
-            log.error("空参请求");
             return null;
         }
         GaussCoordinate target = EllipsoidConverter.transformPlaneCoordinate(source, param);
